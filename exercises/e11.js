@@ -5,7 +5,17 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-
+  let totalWithdrawal = 0;
+  let res = [];
+  for (let element of array) {
+    let accountWithWithdrawals = element.withdrawals ?? [];
+    for (let i = 0; i < accountWithWithdrawals.length; i++) {
+      totalWithdrawal = totalWithdrawal + element.withdrawals[i];
+    }
+    res.push(totalWithdrawal);
+    totalWithdrawal = 0;
+  }
+  return res;
 }
 
 // === TEST YOURSELF ===

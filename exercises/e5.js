@@ -1,4 +1,3 @@
-
 // EXERCISE 5
 // Return an array of all bank account holders names
 // Array example: bankAccounts in /data/data.js
@@ -6,10 +5,12 @@
 
 export function getAllClientNames(array) {
   // Your code goes here...
-
+  let res = [];
+  for (let element of array) {
+    res.push(element.name);
+  }
+  return res;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-5"
